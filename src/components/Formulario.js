@@ -23,7 +23,7 @@ class Formulario extends Component{
     }
     render(){
         return(
-            <div>
+            <div className="no">
                 <form>
                     <input
                         type="text"
