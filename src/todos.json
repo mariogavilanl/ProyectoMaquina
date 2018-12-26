@@ -33,6 +33,12 @@
             "responsible" : "Ror",
             "description" : "lorem ipsum",
             "priority" : "low"
+        }   ,
+        {
+            "title" : "task 6",
+            "responsible" : "Ror",
+            "description" : "lorem ipsum",
+            "priority" : "low"
         }        
     ]
 }

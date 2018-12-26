@@ -5,6 +5,7 @@ import './App.css';
 
 import Navigation from "./components/Navigation";
 import Formulario from "./components/Formulario";
+import Footer from "./components/Footer/Footer"
 import todos from './todos.json'
 
 
@@ -80,7 +81,7 @@ class App extends Component {
         </div>
       </div>
        
-        
+        <Footer></Footer>
       </div>
     );
   }

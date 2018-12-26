@@ -6,7 +6,7 @@ class Formulario extends Component{
         super();
         this.state = {
            title : '',
-           responsabile : '',
+           responsible : '',
            description : '',
            priority : 'low'
         }      
@@ -15,47 +15,37 @@ class Formulario extends Component{
     }
     
     handleInput(e){
-        const {value, name} = e.target;        
+        const {value, name} = e.target; 
         this.setState({
             [name] : value
         })
         console.log(this.state)
     }
+
+    addTask(){
+        todos.push(this.state)
+    }
+
     render(){
         return(
-            <div className="no">
+            <div className="no d-flex">
                 <form>
-                    <input
-                        type="text"
-                        name="title"
-                        value=""
-                        onChange={this.handleInput}
-                    />
+                    <label>Title</label>
+                    <input type="text" name="title" onChange={this.handleInput} value={this.state.title}/>
 
-                    <input
-                        type="text"
-                        name="responsible"
-                        value=""
-                        onChange={this.handleInput}
-                    />
+                    <label>Responsable</label>
+                    <input type="text" name="responsible" onChange={this.handleInput} value={this.state.responsible} />
 
-                    <input
-                        type="text"
-                        name="description"
-                        value=""
-                        onChange={this.handleInput}
-                    />
+                    <label>Descripcion</label>
+                    <input type="text" name="description" onChange={this.handleInput} value={this.state.description}/>
 
-                    <select 
-                    name="priority"
-                    onChange={this.handleInput}>
+                    <label>Prioridad</label>
+                    <select name="priority" onChange={this.handleInput} value={this.state.priority}>
                         <option>Low</option>
                         <option>Medium</option>
                         <option>Hight</option>
                     </select>
-                        
-                        
-                                                                       
+                    <input type="button" className="btn btn-success" value="agregar" onClick={this.agregar}/>                                
             </form>
             
             </div>
